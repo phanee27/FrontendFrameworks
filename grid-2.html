@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 1vh;
+            height: 50vh;
+            width: 80vh;
+            position: absolute;
+            top: 20%;
+            left: 25%;
+
+        }
+        .header, .search, .right-sidebar, .left-sidebar, .middle-column {
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            border-radius: 1.5vh;
+        }
+        .header{            
+            background-color: orange;
+            grid-column:1 / 4 ;
+            height: 6vh;
+            border-radius: 1.5vh;
+            text-align: center;
+            
+        }
+        .search{
+            background-color: green;
+            grid-column: 1 / 3;
+            height: 6vh;
+            border-radius: 1.5vh;
+            text-align: center;
+        }
+        .right-sidebar{
+            background-color: lightcoral;
+            grid-row: 2 / 4 ;
+            grid-column: 3 / 4 ;
+            border-radius: 1.5vh;
+            text-align: center;
+            
+        }
+        .left-sidebar{
+            background-color: blue;
+            height: 50vh;
+            border-radius: 1.5vh;
+            text-align: center;
+            
+            
+        }
+        .middle-column{
+            background-color: violet;
+            border-radius: 1.5vh;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="search">Search</div>
+        <div class="right-sidebar">Right sidebar</div>
+        <div class="left-sidebar">Left sidebar</div>
+        <div class="middle-column">Middle Column</div>
+    </div>
+
+</body>
+</html>
