@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+    <script>
+        9 > 6 > 5 ? document.writeln("True","<br>") : document.writeln("False","<br>");
+        let x=100
+         x=200
+         {
+            let x=20
+            document.writeln(x)
+         }
+        document.writeln(x,"<br>")
+
+
+        function klu(){
+            let x="Iam in function block"
+            document.write(x,"<br>")
+        }
+        klu();
+
+
+
+        let msg=`frontend frameworks`
+        let wish=`welcome to ${msg}`
+        document.writeln(wish.substr(0,20),"<br>")
+
+        //  BigInt to store large values
+        // ranges from 2^53-1 to -2^53-1
+        
+        let y=1234543212343234598746536178923847654372819n  // at last n
+        document.write(y,"<br>")
+
+        let z="KLU"
+        document.write(z+"<br>")
+        // z=Symbol("KLUNIVERSITY")    //hide the data
+        // document.write(z+"<br>")
+
+        var text
+        document.writeln(text+10,"<br>")
+
+        // type of
+        document.write(typeof "KLU" ,"<br>")
+        document.writeln(typeof 100,"<br>")
+        document.write(typeof true,"<br>")
+        document.write(typeof null,"<br>")
+        
+        let arr=[10,20,30,40,50]
+        document.writeln(arr.at(0)," ",arr.at(-5),"<br>")
+        document.writeln(arr.at(1)," ",arr.at(-4),"<br>")
+        document.writeln(arr.at(2)," ",arr.at(-3),"<br>")
+        document.writeln(arr.at(3)," ",arr.at(-2),"<br>")
+        document.writeln(arr.at(4)," ",arr.at(-1),"<br>")
+
+        const arr1=[10,20,30,40,50]
+        arr1[0]=1000
+        document.writeln(arr1[0],"<br>")
+
+        let obj1={
+            frontend:"React",
+            backend:"Node",
+            database:"MySql"
+        }
+        document.writeln(obj1["backend"],"<br>")
+        document.writeln(obj1.frontend)
+        Object.entries(obj1).map(([k,v])=>{
+            document.writeln(` ${k} : ${v} <br>`)
+    })
+    for(let key in obj1){
+        document.writeln(obj1[key],"<br>")
+    }
+    function natural(){
+        for(let i=0;i<10;i++){
+            document.writeln(i)
+        }
+    }
+    natural()
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>
