@@ -1,0 +1,35 @@
+Experiment 7 Solution:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    window.onload=function(){
+        localStorage.removeItem('test1');
+        localStorage.removeItem('test2');
+        localStorage.removeItem('test3');
+    }
+    function visitlink(link){
+        let count=localStorage.getItem(link)?parseInt(localStorage.getItem(link)):0;
+        count +=1;
+        localStorage.setItem(link,count);
+    }
+    function visitlinkcount(){
+        let test1count=localStorage.getItem('test1')?localStorage.getItem('test1'):0;
+        let test2count=localStorage.getItem('test2')?localStorage.getItem('test2'):0;
+        let test3count=localStorage.getItem('test3')?localStorage.getItem('test3'):0;
+        alert(`${test1count}\n ${test2count} \n ${test3count}`);
+        
+    };
+</script>
+<body>
+    <a href="#" onclick="visitlink('test1')">Link1</a>
+    <a href="#" onclick="visitlink('test2')">Link2</a>
+    <a href="#" onclick="visitlink('test3')">Link3</a>
+    <button onclick="visitlinkcount()">Submit</button>
+</body>
+</html>
