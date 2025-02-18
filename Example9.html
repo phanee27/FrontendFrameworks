@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" cellpadding="10" cellspacing="10">
+        <tr>
+            <td id="c1">cell1</td>
+            <td id="c2">cell2</td>
+            <td id="c3">cell3</td>
+        </tr>
+        <tr>
+            <td id="c4">cell4</td>
+            <td id="c5">cell5</td>
+            <td id="c6">cell6</td>
+        </tr>
+        <tr>
+            <td id="c7">cell7</td>
+            <td id="c8">cell8</td>
+            <td id="c9">Spcell</td>
+        </tr>
+    </table>
+
+    <script>
+        document.getElementById("c2").addEventListener("click",function(){
+            this.style.backgroundColor="red";
+        })
+        document.getElementById("c3").addEventListener("click",function(){
+            this.style.backgroundColor="red";
+        })
+
+        document.getElementById("c1").addEventListener("click",function(){
+            let x=document.querySelectorAll("tr:first-child td")
+            x.forEach(cell=>{
+                if(!cell.style.backgroundColor){
+                    cell.style.backgroundColor="green";
+                }
+            })
+        })
+        document.getElementById("c5").addEventListener("click",function(){
+            this.style.backgroundColor="red";
+        })
+        document.getElementById("c6").addEventListener("click",function(){
+            this.style.backgroundColor="red";
+        })
+        document.getElementById("c4").addEventListener("click",function(){
+            let x=document.querySelectorAll("tr:nth-child(2) td")
+            x.forEach(cell=>{
+                if(!cell.style.backgroundColor){
+                    cell.style.backgroundColor="green";
+                }
+            })
+        })
+
+        document.getElementById("c7").addEventListener("click",function(){
+            this.style.backgroundColor="red";
+        })
+        document.getElementById("c8").addEventListener("click",function(){
+            this.style.backgroundColor="red";
+        })
+document.getElementById("c9").addEventListener("click",function(){
+    let x=document.querySelectorAll("td")
+    x.forEach(cell=>{
+        if(!cell.style.backgroundColor){
+            cell.style.backgroundColor="yellow";
+        }
+    })
+
+})
+    </script>
+</body>
+</html>

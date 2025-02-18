@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <script>
+        let subjects=["FEF","FSAD","DAA","MP"]
+        document.writeln(subjects[0]+"<br>");
+
+        subjects.forEach((v,i)=>{
+            document.writeln(`${i}:${v} <br>`)
+        })
+
+        for(let i of subjects){
+            document.writeln(i+"<br>")
+        }
+
+        for(let i in subjects){
+            document.writeln(i+"<br>")
+        }
+
+        for(let i=0;i<subjects.length;i++){
+            document.writeln(subjects[i]+"<br>")
+        }
+
+        subjects.map((v)=>{
+            document.writeln(v+"<br>")
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
